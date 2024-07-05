@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Roller",
+  "version": "1.0.0",
+  "background": { "service_worker": "service_worker.js" },
+  "content_scripts": [
+    {
+      "js": [ "content_scripts/sender.js" ],
+      "matches": [ "https://5e.tools/*" ]
+    },
+    {
+      "js": [ "content_scripts/receiver.js" ],
+      "matches": [ "https://app.roll20.net/editor/" ]
+    }
+  ],
+  "permissions": [ "tabs" ]
+}
